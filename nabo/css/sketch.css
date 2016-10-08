@@ -1,0 +1,470 @@
+/* ******************************************* */
+/* CSS for the font (source: swiss styleguide) */
+/* ******************************************* */
+@font-face {
+    font-family:'Admin Icons';
+    src:url(../fonts/AdminCH_Symbols.eot?v3);
+    src:url(../fonts/AdminCH_Symbols.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/AdminCH_Symbols.woff2?v3) format("woff2"),
+    url(../fonts/AdminCH_Symbols.woff?v3) format("woff"),
+    url(../fonts/AdminCH_Symbols.ttf?v3) format("truetype");
+    font-weight:400;font-style:normal
+}
+
+@font-face {
+    font-family:'Frutiger Neue';
+    src:url(../fonts/FrutigerNeueW02-Bd.eot?v2);
+    src:url(../fonts/FrutigerNeueW02-Bd.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/FrutigerNeueW02-Bd.woff2?v2) format("woff2"),
+    url(../fonts/FrutigerNeueW02-Bd.woff?v2) format("woff"),
+    url(../fonts/FrutigerNeueW02-Bd.ttf?v2) format("truetype");
+    font-weight:700;font-style:normal
+}
+
+@font-face{font-family:'Frutiger Neue';
+    src:url(../fonts/FrutigerNeueW02-It.eot?v2);
+    src:url(../fonts/FrutigerNeueW02-It.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/FrutigerNeueW02-It.woff2?v2) format("woff2"),
+    url(../fonts/FrutigerNeueW02-It.woff?v2) format("woff"),
+    url(../fonts/FrutigerNeueW02-It.ttf?v2) format("truetype");
+    font-weight:400;
+    font-style:italic
+}
+
+@font-face{font-family:'Frutiger Neue';
+    src:url(../fonts/FrutigerNeueW02-Regular.eot?v2);
+    src:url(../fonts/FrutigerNeueW02-Regular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/FrutigerNeueW02-Regular.woff2?v2) format("woff2"),
+    url(../fonts/FrutigerNeueW02-Regular.woff?v2) format("woff"),
+    url(../fonts/FrutigerNeueW02-Regular.ttf?v2) format("truetype");
+    font-weight:400;
+    font-style:normal
+} 
+
+@font-face { 
+    font-family:'Frutiger Neue';
+    src:url(../fonts/FrutigerNeueW02-Light.eot?v2);
+    src:url(../fonts/FrutigerNeueW02-Light.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/FrutigerNeueW02-Light.woff2?v2) format("woff2"),
+    url(../fonts/FrutigerNeueW02-Light.woff?v2) format("woff"),
+    url(../fonts/FrutigerNeueW02-Light.ttf?v2) format("truetype");
+    font-weight:100;
+    font-style:normal
+}
+/* ********************* */
+/* CSS for html und body */
+/* ********************* */
+body { 
+	padding: 0; 
+	margin: 0;
+}
+
+h3 {
+    color: black;
+    font-family: Frutiger Neue;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+h3.error {
+    color: red;
+    font-family: Frutiger Neue;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+h4 {
+    color: black;
+    font-family: Frutiger Neue;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+label {
+    color: black;
+    font-family: Frutiger Neue;
+    font-size: 12px;
+    font-weight: bold; 
+}
+
+div {
+    color: black;
+    font-family: Frutiger Neue;
+    font-size: 14px;    
+}
+
+img {
+    width: 100%;
+    height: 100%;
+
+}
+/* ************************ */
+/* CSS for all the tooltips */
+/* ************************ */
+.tooltip {
+    position: absolute;
+    background-color: rgba(255,255,255,0.9);
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.tooltipinfo {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltipinfo .tooltiptext {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: Frutiger Neue;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #999;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.tooltipinfo .tooltiptext::after {
+    content: "\25B2";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: 1px;
+    margin-bottom: -5px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.tooltipinfo:hover .tooltiptext {
+    visibility: visible;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-family: Frutiger Neue;
+  font-size: 14px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 3px;
+  z-index: 10;
+  border: 1px solid #999;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.6);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+/* ******************************** */
+/* Style the tabs and list elements */
+/* ******************************** */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #D8E8EF;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #E5E5E5;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #66AFE9;}
+
+#starttab {background-color: #66AFE9;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 0px;
+    border: 0px solid #66AFE9;
+    border-top: none;
+}
+/* ****************** */
+/* Style the barchart */
+/* ****************** */
+.axis {      
+   font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+   fill: none;
+   stroke: #000;
+   shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: Frutiger Neue;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.bar {
+  fill: #66AFE9;
+}
+
+.bar:hover {
+  fill: #006699 ;
+}
+/* ******************************** */
+/* CSS for the wrapper and the divs */
+/* ******************************** */
+#wrapper {
+    width: 588px; 
+    height: 580px; 
+    margin-left: 0px; 
+    border-width: 0px; 
+    border-color: black; 
+    background:#F5F5F5; 
+    float: both;
+}
+
+#vis {
+    width: 588px; 
+    height: 550px;
+    position: absolute; 
+    z-index: 5;
+    background:#F5F5F5; 
+}
+
+#barchart {
+    width: 588px; 
+    height: 280px; 
+    margin-left: 0px; 
+    background:#F5F5F5; 
+    float: both;
+    border-top: 1px;
+    border-top-style: dotted;
+}
+
+#detail {
+    float: left;
+    margin-left: 10px;
+}
+
+#content {
+    position: absolute;
+    left: 132px;
+}
+
+#URL {
+    position: absolute;
+    left: 120px;
+}
+
+#chart {
+    float: right;
+}
+/* ************************************ */
+/* CSS for the dropdowns and the slider */
+/* ************************************ */
+#select { 
+    position: absolute;
+    width: 560px;
+    padding: 35px 14px;
+    border: none;
+    border-radius: 0px;
+    background-color: #E5E5E5;
+}
+
+#subID {
+    position: absolute;
+    top: 10px;  
+    left: 5px;
+    font-size: 12px;  
+    width: 200px;
+    height: 23px;
+    vertical-align: middle;
+    padding: 4px 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #D5D5D5;
+
+}
+
+#landuseID {
+    position: absolute;
+    top: 38px;
+    left: 5px;
+    font-size: 12px;  
+    width: 200px;
+    height: 23px;
+    vertical-align: middle;
+    padding: 4px 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #D5D5D5;
+
+}
+
+#slider {
+    position: absolute;
+    width: 270px;
+    z-index: 15;
+    top: 35px;
+    left: 280px;
+    background-color: #D5D5D5;
+}
+
+#slider svg {
+    width: 350px;
+    height: 20px;
+}
+
+#survey {
+    position: absolute;
+    top: 10px;
+    left: 280px;
+}
+
+#span {
+    color: blue;
+}
+/* *********************** */
+/* Style for the modal box */
+/* *********************** */
+#modal_param {
+    position: absolute;
+    top: 10px;  
+    left: 215px;
+    width:23px;
+    height:23px;
+}
+
+#modal_landuse {
+    position: absolute;
+    top: 37px;  
+    left: 215px;
+    width:23px;
+    height:23px;
+
+}
+
+#modal_municipality {
+    position: absolute;
+    top: 584px;  
+    left: 78px;
+    width:23px;
+    height:23px;
+
+}
+
+.modalDialog {
+    position: fixed;
+    width: 588px;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 450px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 5px;
+    background: #fff;
+    background: -moz-linear-gradient(#F5F5F5, #F5F5F5);
+    background: -webkit-linear-gradient(#F5F5F5, #F5F5F5);
+    background: -o-linear-gradient(#F5F5F5, #F5F5F5);
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { 
+    background: #66AFE9; 
+}
+/* **************** */
+/* Style the legend */
+/* **************** */
+.legend {
+    font-size: 12px;
+    font-family: Frutiger Neue;
+}
+
+rect {
+    stroke-width: 2;
+}
+
+.visual {
+    font-size: 12px;
+    font-family: Frutiger Neue;
+    cursor: pointer;
+}
+
+.glevel {  
+    font-size: 12px;
+    font-family: Frutiger Neue;
+}
