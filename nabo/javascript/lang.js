@@ -4,7 +4,7 @@ var de = {
 	tabvis : "Visualisierung",
 	tabplace : "Beobachtungsstandorte",
 	hometitel : "Nationale Bodenbeobachtung (NABO) 1985-2009",
-	hometext1 : "Die Nationale Bodenbeobachtung (NABO) überwacht mit ihrem Messnetz aus über 100 Dauerbeo- bachtungsstandorten seit 1985 die Entwicklung der Schadstoffgehalte unserer Böden. Die Standorte wurden so ausgewählt, dass unterschiedliche Landnutzungstypen (Ackerbau, Grasland, Wald, Spezialkulturen und andere) vertreten sind. Der vorliegende Datensatz präsentiert die Resultate über fünf Erhebungen (1985–2009) für die Schwermetalle Cadmium, Zink, Kupfer, Quecksilber, Blei, Nickel, Chrom und Cobalt.",
+	hometext1 : "Die Nationale Bodenbeobachtung (NABO) überwacht mit ihrem Messnetz aus über 100 Dauerbe- obachtungsstandorten seit 1985 die Entwicklung der Schadstoffgehalte unserer Böden. Die Standorte wurden so ausgewählt, dass unterschiedliche Landnutzungstypen (Ackerbau, Grasland, Wald, Spezialkulturen und andere) vertreten sind. Der vorliegende Datensatz präsentiert die Resultate über fünf Erhebungen (1985–2009) für die Schwermetalle Cadmium, Zink, Kupfer, Quecksilber, Blei, Nickel, Chrom und Cobalt.",
 	hometext2 : "Visualisierung Schwermetallbelastung des Bodens",
 	hometext3 : "Die vorliegende Visualisierung der Schwermetallbelastung basiert auf dem aktuellen Datensatz, welcher durch das Bundesamt für Umwelt auf lindas-data.ch publiziert wird. Die Daten werden online gelesen (SPARQL) und verarbeitet.",
 	hometext4 : "Bei den Messdaten handelt es sich Erhebungsmittelwerte von Schwermetallkonzentrationen in den obersten 20 cm des Bodens von rund 100 Dauerbeobachtungsstandorten der Nationalen Boden- beobachtung NABO.",
