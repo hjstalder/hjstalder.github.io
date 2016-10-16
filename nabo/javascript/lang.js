@@ -11,7 +11,7 @@ var de = {
 	hometext5 : "Handhabung Visualisierung",
 	hometext6 : "1. Wechseln Sie zum Register Visualisierung.</br>2. Wählen Sie ein Schwermetall aus. </br>3. Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</br>4. Die Auswahl der Landnutzung ist optional.</br>5. Details zum Standort werden im Tooltip zu jedem Kreis angzeigt.</br>6. Mittels Mausklick auf einen Kreis werden weitere Details zum Standort und zur zeitlichen Entwicklung angezeigt.",
 	hometext6mobile : "1. Wechseln Sie zum Register Visualisierung.</br>2. Wählen Sie ein Schwermetall aus. </br>3. Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</br>4. Die Auswahl der Landnutzung ist optional.</br>5. Details zum Standort werden im Tooltip zu jedem Kreis angzeigt.</br>6. Mittels einem Fingertipp auf den Link «Zeitliche Entwicklung» im Tooltip werden weitere Details zum Standort und zur zeitlichen Entwicklung angezeigt.",
-	errortext : "Die Daten konnten nicht online gelesen werden. Es werden Erhebungsdaten vom Juli 2016 verwendet.",
+	errortext : "</br>Die Daten konnten nicht online gelesen werden. Es werden Erhebungsdaten vom Juli 2016 verwendet.",
 	chooseLanduse: "Landnutzung alle",
 	chooseParameter: "Schwermetall wählen",
 	chooseSurvey: "Beprobungszeitraum: ",
@@ -55,7 +55,8 @@ var de = {
 	landuseinfo: "Details zur gewählten Landnutzung",
 	placeinfo: "Details zum gewählten Standort",
 	howto: "Zeitliche Entwicklung",
-	linkVis: "Daten- visualisierung"
+	linkVis: "Daten- visualisierung",
+	linkNabo: "Webseite NABO"
 };
 
 var fr = {
@@ -115,7 +116,8 @@ var fr = {
 	landuseinfo: "de-Details zur gewählten Landnutzung",
 	placeinfo: "de-Details zum gewählten Standort",
 	howto: "de-Zeitliche Entwicklung",
-	linkVis: "de-Datenvisualisierung"
+	linkVis: "de-Datenvisualisierung",
+	linkNabo: "de-Webseite NABO"
 };
 
 var it = {
@@ -175,7 +177,8 @@ var it = {
 	landuseinfo: "de-Details zur gewählten Landnutzung",
 	placeinfo: "de-Details zum gewählten Standort",
 	howto: "de-Zeitliche Entwicklung",
-	linkVis: "de-Datenvisualisierung"
+	linkVis: "de-Datenvisualisierung",
+	linkNabo: "de-Webseite NABO"
 };
 
 var en = {
@@ -235,5 +238,6 @@ var en = {
 	landuseinfo: "de-Details zur gewählten Landnutzung",
 	placeinfo: "de-Details zum gewählten Standort",
 	howto: "de-Zeitliche Entwicklung",
-	linkVis: "Data visualization"
+	linkVis: "Data visualization",
+	linkNabo: "de-Webseite NABO"
 }

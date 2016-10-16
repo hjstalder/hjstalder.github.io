@@ -28,3 +28,19 @@ function modalbox_municipality (selectedMunicipality) {
 	document.getElementById('loreipsum').innerHTML = window[setLanguage()]["loreipsum"];	
 }
 
+function modalbox_handling () {
+	console.log("modalbox: ", d3.select("#landuseID").property("value"));
+	console.log("modalbox1: ", document.getElementById('modaltitel'));
+	document.getElementById('handlingTitel').innerHTML = window[setLanguage()]["hometext5"];
+	//document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6"];
+
+    if (mobileCheck()) { 
+      document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6mobile"];
+    } else {
+      document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6"];
+    }
+
+
+
+
+}

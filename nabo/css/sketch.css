@@ -82,7 +82,16 @@ h4 {
     text-align: justify;
 }
 
-h4.visLink {
+h4.list {
+    color: black;
+    font-family: Frutiger Neue;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+h4.link {
     color: black;
     font-family: Frutiger Neue;
     font-size: 12px;
@@ -195,11 +204,20 @@ img {
 /* ********************************** */
 #vis_page {
     position: absolute;
-    top: 250px;  
-    left: 510px;
-    width: 50px;
-    height: 50px;
+    top: 270px;  
+    left: 520px;
+    width: 40px;
+    height: 40px;
 }
+
+#nabo_page {
+    position: absolute;
+    top: 120px;  
+    left: 520px;
+    width: 40px;
+    height: 40px;
+}
+
 /* ******************************** */
 /* Style the tabs and list elements */
 /* ******************************** */
@@ -273,7 +291,7 @@ ul.tab li a:focus, .active {background-color: #66AFE9;}
 /* ******************************** */
 #wrapper {
     width: 588px; 
-    height: 580px; 
+    height: 460px; 
     margin-left: 0px; 
     border-width: 0px; 
     border-color: black; 
@@ -406,6 +424,15 @@ ul.tab li a:focus, .active {background-color: #66AFE9;}
     position: absolute;
     top: 584px;  
     left: 78px;
+    width:23px;
+    height:23px;
+
+}
+
+#modal_handling {
+    position: absolute;
+    top: 3px;  
+    left: 550px;
     width:23px;
     height:23px;
 

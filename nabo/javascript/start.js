@@ -30,14 +30,8 @@ function opentab(evt, register) {
     }
 
     // Show the current tab, and add an "active" class to the link that opened the tab
-    console.log("event: ", evt.currentTarget);
-    console.log("tablinks: ", tablinks[0].className);
     document.getElementById(register).style.display = "block";
     evt.currentTarget.className += " active";
-    console.log("event2: ", evt.currentTarget.className);
-
-    //document.getElementById(register).click();
-
 }
 
 function opentabVis(evt, register) {
@@ -75,6 +69,8 @@ function setactive(evt, register) {
     document.getElementById("tooltiptext_landuse").innerHTML = window[setLanguage()]["landuseinfo"];
     document.getElementById("tooltiptext_place").innerHTML = window[setLanguage()]["placeinfo"];
     document.getElementById("tooltiptext_vis").innerHTML = window[setLanguage()]["linkVis"];
+    document.getElementById("tooltiptext_nabo").innerHTML = window[setLanguage()]["linkNabo"];
+    document.getElementById("tooltiptext_handling").innerHTML = window[setLanguage()]["hometext5"];    
 
     // Set the name of the tabs
     document.getElementById("tabhome").innerHTML = window[setLanguage()]["tabhome"];
@@ -91,12 +87,11 @@ function setactive(evt, register) {
     document.getElementById('text2').innerHTML = window[setLanguage()]["hometext2"];
     document.getElementById('text3').innerHTML = window[setLanguage()]["hometext3"];
     document.getElementById('text4').innerHTML = window[setLanguage()]["hometext4"];
-    document.getElementById('text5').innerHTML = window[setLanguage()]["hometext5"];
 
     if (mobileCheck()) { 
-      document.getElementById('text6').innerHTML = window[setLanguage()]["hometext6mobile"];
+      document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6mobile"];
     } else {
-      document.getElementById('text6').innerHTML = window[setLanguage()]["hometext6"];
+      document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6"];
     }
 
     //Set the content in the right language in the tab places
