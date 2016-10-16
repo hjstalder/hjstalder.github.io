@@ -36,7 +36,7 @@ function opentab(evt, register) {
     evt.currentTarget.className += " active";
     console.log("event2: ", evt.currentTarget.className);
 
-    document.getElementById(register).click();
+    //document.getElementById(register).click();
 
 }
 
