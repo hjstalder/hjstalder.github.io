@@ -227,7 +227,7 @@ ul.tab li a {
 }
 
 /* Change background color of links on hover */
-ul.tab li a:hover {background-color: #E5E5E5;}
+/*ul.tab li a:hover {background-color: #E5E5E5;}*/
 
 /* Create an active/current tablink class */
 ul.tab li a:focus, .active {background-color: #66AFE9;}
