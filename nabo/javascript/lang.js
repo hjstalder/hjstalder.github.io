@@ -7,7 +7,7 @@ var de = {
 	hometext1 : "Die Nationale Bodenbeobachtung (NABO) überwacht mit ihrem Messnetz aus über 100 Dauerbe- obachtungsstandorten seit 1985 die Entwicklung der Schadstoffgehalte unserer Böden. Die Standorte wurden so ausgewählt, dass unterschiedliche Landnutzungstypen (Ackerbau, Grasland, Wald, Spezialkulturen und andere) vertreten sind. Der vorliegende Datensatz präsentiert die Resultate über fünf Erhebungen (1985–2009) für die Schwermetalle Cadmium, Zink, Kupfer, Quecksilber, Blei, Nickel, Chrom und Cobalt.",
 	hometext2 : "Visualisierung Schwermetallbelastung des Bodens",
 	hometext3 : "Die vorliegende Visualisierung der Schwermetallbelastung basiert auf dem aktuellen Datensatz, welcher durch das Bundesamt für Umwelt auf lindas-data.ch publiziert wird. Die Daten werden online gelesen (SPARQL) und verarbeitet.",
-	hometext4 : "Bei den Messdaten handelt es sich Erhebungsmittelwerte von Schwermetall- konzentrationen in den obersten 20 cm des Bodens von rund 100 Dauer- beobachtungsstandorten der Nationalen Bodenbeobachtung NABO.",
+	hometext4 : "Bei den Messdaten handelt es sich Erhebungsmittelwerte von Schwermetallkonzentrationen in den obersten 20 cm des Bodens von rund 100 Dauerbeobachtungsstandorten der Nationalen Boden- beobachtung NABO.",
 	hometext5 : "Handhabung Visualisierung",
 	hometext6 : "1. Wechseln Sie zum Register Visualisierung.</br>2. Wählen Sie ein Schwermetall aus. </br>3. Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</br>4. Die Auswahl der Landnutzung ist optional.</br>5. Details zum Standort werden im Tooltip zu jedem Kreis angzeigt.</br>6. Mittels Mausklick auf einen Kreis werden weitere Details zum Standort und zur zeitlichen</br>Entwicklung angezeigt.",
 	hometext6mobile : "1. Wechseln Sie zum Register Visualisierung.</br>2. Wählen Sie ein Schwermetall aus. </br>3. Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</br>4. Die Auswahl der Landnutzung ist optional.</br>5. Details zum Standort werden im Tooltip zu jedem Kreis angzeigt.</br>6. Mittels einem Fingertipp auf den Link «Zeitliche Entwicklung» im Tooltip werden weitere Details</br>zum Standort und zur zeitlichen Entwicklung angezeigt.",
@@ -54,8 +54,7 @@ var de = {
 	parameterinfo: "Details zum gewählten Schwermetall",
 	landuseinfo: "Details zur gewählten Landnutzung",
 	placeinfo: "Details zum gewählten Standort",
-	howto: "Zeitliche Entwicklung",
-	linkVis: "Daten- visualisierung"
+	howto: "Zeitliche Entwicklung"
 };
 
 var fr = {
@@ -114,8 +113,7 @@ var fr = {
 	parameterinfo: "de-Details zum gewählten Schwermetall",
 	landuseinfo: "de-Details zur gewählten Landnutzung",
 	placeinfo: "de-Details zum gewählten Standort",
-	howto: "de-Zeitliche Entwicklung",
-	linkVis: "de-Datenvisualisierung"
+	howto: "de-Zeitliche Entwicklung"
 };
 
 var it = {
@@ -174,8 +172,7 @@ var it = {
 	parameterinfo: "de-Details zum gewählten Schwermetall",
 	landuseinfo: "de-Details zur gewählten Landnutzung",
 	placeinfo: "de-Details zum gewählten Standort",
-	howto: "de-Zeitliche Entwicklung",
-	linkVis: "de-Datenvisualisierung"
+	howto: "de-Zeitliche Entwicklung"
 };
 
 var en = {
@@ -234,6 +231,5 @@ var en = {
 	parameterinfo: "de-Details zum gewählten Schwermetall",
 	landuseinfo: "de-Details zur gewählten Landnutzung",
 	placeinfo: "de-Details zum gewählten Standort",
-	howto: "de-Zeitliche Entwicklung",
-	linkVis: "Data visualization"
+	howto: "de-Zeitliche Entwicklung"
 }

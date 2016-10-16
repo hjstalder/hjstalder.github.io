@@ -30,37 +30,8 @@ function opentab(evt, register) {
     }
 
     // Show the current tab, and add an "active" class to the link that opened the tab
-    console.log("event: ", evt.currentTarget);
-    console.log("tablinks: ", tablinks[0].className);
     document.getElementById(register).style.display = "block";
     evt.currentTarget.className += " active";
-    console.log("event2: ", evt.currentTarget.className);  
-}
-
-function opentabVis(evt, register) {
-  //console.log("setactive", evt.currentTarget.className);
-
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Set the start-tab back to the normal backgroundColor
-    document.getElementById("starttab").style.backgroundColor = color.normalTab;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tabcontent.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the link that opened the tab
-    document.getElementById(register).style.display = "block";
-    document.getElementById("tabvis").click();
 }
 
 // The home tab is the start tab
@@ -71,7 +42,6 @@ function setactive(evt, register) {
     document.getElementById("tooltiptext_parameter").innerHTML = window[setLanguage()]["parameterinfo"];
     document.getElementById("tooltiptext_landuse").innerHTML = window[setLanguage()]["landuseinfo"];
     document.getElementById("tooltiptext_place").innerHTML = window[setLanguage()]["placeinfo"];
-    document.getElementById("tooltiptext_vis").innerHTML = window[setLanguage()]["linkVis"];
 
     // Set the name of the tabs
     document.getElementById("tabhome").innerHTML = window[setLanguage()]["tabhome"];
@@ -100,7 +70,7 @@ function setactive(evt, register) {
     document.getElementById('titelPlace').innerHTML = window[setLanguage()]["naboPlaces"];
 
     //Set the info icon to "none" in the barchart area
-    document.getElementById("municipalityDetails").style.display = "none"; 
+    document.getElementById("municipalityDetails").style.display = "none";
 }
 
 // ***********************

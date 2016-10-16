@@ -78,17 +78,6 @@ h4 {
     font-family: Frutiger Neue;
     font-size: 12px;
     margin-left: 10px;
-    margin-right: 20px;
-    text-align: justify;
-}
-
-h4.visLink {
-    color: black;
-    font-family: Frutiger Neue;
-    font-size: 12px;
-    margin-left: 10px;
-    margin-right: 100px;
-    text-align: justify;
 }
 
 label {
@@ -189,16 +178,6 @@ img {
   margin: -1px 0 0 0;
   top: 100%;
   left: 0;
-}
-/* ********************************** */
-/* Style for the link on the homepage */
-/* ********************************** */
-#vis_page {
-    position: absolute;
-    top: 250px;  
-    left: 510px;
-    width: 50px;
-    height: 50px;
 }
 /* ******************************** */
 /* Style the tabs and list elements */
