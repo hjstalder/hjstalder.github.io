@@ -441,7 +441,7 @@ ul.tab li a:focus, .active {background-color: #66AFE9;}
 .modalDialog {
     position: fixed;
     width: 588px;
-    height: 800px;
+    height: 830px;
     font-family: Arial, Helvetica, sans-serif;
     top: 0;
     right: 0;
