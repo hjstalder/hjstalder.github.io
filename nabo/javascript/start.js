@@ -69,7 +69,7 @@ function setactive(evt, register) {
     document.getElementById("tooltiptext_landuse").innerHTML = window[setLanguage()]["landuseinfo"];
     document.getElementById("tooltiptext_place").innerHTML = window[setLanguage()]["placeinfo"];
     document.getElementById("tooltiptext_vis").innerHTML = window[setLanguage()]["linkVis"];
-    document.getElementById("tooltiptext_nabo").innerHTML = window[setLanguage()]["linkNabo"];
+    //document.getElementById("tooltiptext_nabo").innerHTML = window[setLanguage()]["linkNabo"];
     document.getElementById("tooltiptext_handling").innerHTML = window[setLanguage()]["hometext5"];    
 
     // Set the name of the tabs
@@ -180,11 +180,37 @@ function dropdown_landuse(landuse_data) {
     option.value = "";
     selectElement.options[0] = option;
 
+    // all grassland
+    var option = document.createElement('option');
+    option.text = window[setLanguage()]["chooseGrassland"];
+    option.value = window[setLanguage()]["chooseGrassland"];
+    option.values = ["gras1","gras2"];
+    selectElement.options[1] = option;
+
+    // all forest
+    var option = document.createElement('option');
+    option.text = window[setLanguage()]["chooseForest"];
+    option.value = window[setLanguage()]["chooseForest"];
+    selectElement.options[2] = option;
+
+    // all special growing
+    var option = document.createElement('option');
+    option.text = window[setLanguage()]["chooseSpecialGrowing"];
+    option.value = window[setLanguage()]["chooseSpecialGrowing"];
+    selectElement.options[3] = option;
+
+    // all othter
+    var option = document.createElement('option');
+    option.text = window[setLanguage()]["chooseOther"];
+    option.value = window[setLanguage()]["chooseOther"];
+    selectElement.options[4] = option;
+
     for(var i=0;i<landuse_data.length;i++){
       var option = document.createElement('option');	
       option.text = landuse_data[i].key;
       option.value = landuse_data[i].key;
-      selectElement.options[i+1] = option;
+      selectElement.options[i+5] = option;
+      console.log("landuse dropdown: ", selectElement.options);
  	}
 }
 function landuseValues(json_data) {

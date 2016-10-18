@@ -66,10 +66,10 @@ h3 {
     margin-left: 10px;
 }
 
-h3.error {
+h4.error {
     color: red;
     font-family: Frutiger Neue;
-    font-size: 16px;
+    font-size: 12px;
     margin-left: 10px;
 }
 
@@ -96,7 +96,7 @@ h4.link {
     font-family: Frutiger Neue;
     font-size: 12px;
     margin-left: 10px;
-    margin-right: 100px;
+    margin-right: 200px;
     text-align: justify;
 }
 
@@ -204,10 +204,10 @@ img {
 /* ********************************** */
 #vis_page {
     position: absolute;
-    top: 270px;  
-    left: 520px;
-    width: 40px;
-    height: 40px;
+    top: 230px;  
+    left: 400px;
+    width: 170px;
+    height: 115px;
 }
 
 #nabo_page {
