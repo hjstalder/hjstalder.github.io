@@ -69,13 +69,12 @@ function setactive(evt, register) {
     document.getElementById("tooltiptext_landuse").innerHTML = window[setLanguage()]["landuseinfo"];
     document.getElementById("tooltiptext_place").innerHTML = window[setLanguage()]["placeinfo"];
     document.getElementById("tooltiptext_vis").innerHTML = window[setLanguage()]["linkVis"];
-    //document.getElementById("tooltiptext_nabo").innerHTML = window[setLanguage()]["linkNabo"];
     document.getElementById("tooltiptext_handling").innerHTML = window[setLanguage()]["hometext5"];    
+    document.getElementById("tooltiptext_handling_vis").innerHTML = window[setLanguage()]["hometext5"];    
 
     // Set the name of the tabs
     document.getElementById("tabhome").innerHTML = window[setLanguage()]["tabhome"];
     document.getElementById("tabvis").innerHTML = window[setLanguage()]["tabvis"];
-    document.getElementById("tabplace").innerHTML = window[setLanguage()]["tabplace"];
 
     // After onload the page, show the start-tab as the current tab
     document.getElementById(register).style.display = "block";
@@ -88,14 +87,11 @@ function setactive(evt, register) {
     document.getElementById('text3').innerHTML = window[setLanguage()]["hometext3"];
     document.getElementById('text4').innerHTML = window[setLanguage()]["hometext4"];
 
-    if (mobileCheck()) { 
+    /*if (mobileCheck()) { 
       document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6mobile"];
     } else {
       document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6"];
-    }
-
-    //Set the content in the right language in the tab places
-    document.getElementById('titelPlace').innerHTML = window[setLanguage()]["naboPlaces"];
+    }*/
 
     //Set the info icon to "none" in the barchart area
     document.getElementById("municipalityDetails").style.display = "none"; 

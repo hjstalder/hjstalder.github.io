@@ -31,13 +31,16 @@ function modalbox_municipality (selectedMunicipality) {
 function modalbox_handling () {
 	console.log("modalbox: ", d3.select("#landuseID").property("value"));
 	console.log("modalbox1: ", document.getElementById('modaltitel'));
-	document.getElementById('handlingTitel').innerHTML = window[setLanguage()]["hometext5"];
+	document.getElementById('handlingTitle').innerHTML = window[setLanguage()]["hometext5"];
+	document.getElementById('handlingTitleVis').innerHTML = window[setLanguage()]["hometext5"];
 	//document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6"];
 
     if (mobileCheck()) { 
       document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6mobile"];
+      document.getElementById('handlingTextVis').innerHTML = window[setLanguage()]["hometext6mobile"];
     } else {
       document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6"];
+      document.getElementById('handlingTextVis').innerHTML = window[setLanguage()]["hometext6"];
     }
 
 

@@ -28,7 +28,6 @@
     <ul class="tab">
       <li id="starttab"><a href="#" id="tabhome" class="tablinks" onclick="opentab(event, 'home')"></a></li>
       <li><a href="#" id="tabvis" class="tablinks" onclick="opentab(event, 'vis')"></a></li>
-      <li><a href="#" id="tabplace" class="tablinks" onclick="opentab(event, 'place')"></a></li>
     </ul>
     <div id="home" class="tabcontent">
       <a class="tooltipinfo" id="modal_handling" href="#openModalHandling" onclick="modalbox_handling()">
@@ -38,17 +37,13 @@
       <div id="openModalHandling" class="modalDialog">
         <div>
           <a href="#close" title="Close" class="close">X</a>
-          <h3 id="handlingTitel"></h3>
+          <h3 id="handlingTitle"></h3>
           <h4 class="list" id="handlingText"></h4>
         </div>
       </div> <!-- div openModal -->
       <br>
       <h3 id="titel"></h3>
       <h4 id="text1"></h4>
-        <!--<a href="http://www.nabo.admin.ch" target="_blank" id="nabo_page" class="tooltipinfo">
-          <img src="img/external.png">
-          <span id="tooltiptext_nabo" class="tooltiptext"></span>
-        </a>-->
       <h3 id="text2"></h3>
       <h4 class="link" id="text3"></h4>
         <a href="#" id="vis_page" class="tooltipinfo" onclick="opentabVis(event, 'vis')">
@@ -59,12 +54,18 @@
       <h4 id="text7"></h4>
       <h4 id="error" class="error"></h4>
     </div> <!-- div home -->
-    <div id="place" class="tabcontent">
-      <br>
-      <h3 id="titelPlace"></h3>
-      <img src="img/NABO_588.png" >
-    </div> <!-- div place -->
     <div id="vis" class="tabcontent">
+      <a class="tooltipinfo" id="modal_handling" href="#openModalHandlingVis" onclick="modalbox_handling()">
+        <img src="img/info.png">
+        <span id="tooltiptext_handling_vis" class="tooltiptext"></span>
+      </a>
+      <div id="openModalHandlingVis" class="modalDialog">
+        <div>
+          <a href="#close" title="Close" class="close">X</a>
+          <h3 id="handlingTitleVis"></h3>
+          <h4 class="list" id="handlingTextVis"></h4>
+        </div>
+      </div> <!-- div openModal -->      
       <form>
         <div id="select">
           <select id="subID" name="substance" size="1"></select>

@@ -116,6 +116,7 @@ div {
 img {
     width: 100%;
     height: 100%;
+    filter: alpha(opacity=50);
 
 }
 /* ************************ */
@@ -133,6 +134,7 @@ img {
 .tooltipinfo {
     position: relative;
     display: inline-block;
+    z-index: 18;
 }
 
 .tooltipinfo .tooltiptext {
@@ -430,13 +432,23 @@ ul.tab li a:focus, .active {background-color: #66AFE9;}
 }
 
 #modal_handling {
-    position: absolute;
+    position: fixed;
     top: 3px;  
     left: 550px;
     width:23px;
     height:23px;
 
 }
+
+#modal_handling_vis {
+    position: fixed;
+    top: 3px;  
+    left: 550px;
+    width:23px;
+    height:23px;
+
+}
+
 
 .modalDialog {
     position: fixed;
