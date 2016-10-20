@@ -117,7 +117,7 @@ img {
     width: 100%;
     height: 100%;
     filter: alpha(opacity=50);
-
+    z-index: 10;
 }
 /* ************************ */
 /* CSS for all the tooltips */
@@ -134,7 +134,7 @@ img {
 .tooltipinfo {
     position: relative;
     display: inline-block;
-    z-index: 18;
+    /*z-index: 1;*/
 }
 
 .tooltipinfo .tooltiptext {
@@ -148,7 +148,7 @@ img {
     border: 1px solid #999;
     padding: 8px;
     position: absolute;
-    z-index: 1;
+    z-index: 18;
     top: 120%;
     left: 50%;
     margin-left: -60px;
@@ -166,7 +166,7 @@ img {
 }
 
 .tooltipinfo:hover .tooltiptext {
-    visibility: visible;
+    visibility: visible;  
 }
 
 .d3-tip {
@@ -432,7 +432,7 @@ ul.tab li a:focus, .active {background-color: #66AFE9;}
 }
 
 #modal_handling {
-    position: fixed;
+    position: absolute;
     top: 3px;  
     left: 550px;
     width:23px;
@@ -441,8 +441,8 @@ ul.tab li a:focus, .active {background-color: #66AFE9;}
 }
 
 #modal_handling_vis {
-    position: fixed;
-    top: 3px;  
+    position: absolute;
+    top: -25px;  
     left: 550px;
     width:23px;
     height:23px;
