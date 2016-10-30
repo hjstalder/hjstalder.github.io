@@ -72,6 +72,7 @@ function updateData(json_data) {
   d3.selectAll('.glevel').remove();
   d3.selectAll('.legend').remove();
   d3.selectAll('.visualcross').remove();
+  d3.selectAll('.xdataPoint').remove();
   //Set the info icon to "none" in the barchart area
   document.getElementById("municipalityDetails").style.display = "none";
 
