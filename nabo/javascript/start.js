@@ -67,7 +67,7 @@ function setactive(evt, register) {
     // Set the text for the information tooltips
     document.getElementById("tooltiptext_parameter").innerHTML = window[setLanguage()]["parameterinfo"];
     document.getElementById("tooltiptext_landuse").innerHTML = window[setLanguage()]["landuseinfo"];
-    document.getElementById("tooltiptext_place").innerHTML = window[setLanguage()]["placeinfo"];
+    //document.getElementById("tooltiptext_place").innerHTML = window[setLanguage()]["placeinfo"];
     document.getElementById("tooltiptext_vis").innerHTML = window[setLanguage()]["linkVis"];
     document.getElementById("tooltiptext_handling").innerHTML = window[setLanguage()]["hometext5"];    
     document.getElementById("tooltiptext_handling_vis").innerHTML = window[setLanguage()]["hometext5"];    
@@ -81,17 +81,17 @@ function setactive(evt, register) {
     document.getElementById("starttab").style.backgroundColor = color.currentTab;
    
 	  // Set the content in the right language in the tab home
-    document.getElementById('titel').innerHTML = window[setLanguage()]["hometitel"];
+    document.getElementById('text0').innerHTML = window[setLanguage()]["hometext0"];
     document.getElementById('text1').innerHTML = window[setLanguage()]["hometext1"];
     document.getElementById('text2').innerHTML = window[setLanguage()]["hometext2"];
     document.getElementById('text3').innerHTML = window[setLanguage()]["hometext3"];
     document.getElementById('text4').innerHTML = window[setLanguage()]["hometext4"];
 
-    /*if (mobileCheck()) { 
-      document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6mobile"];
-    } else {
-      document.getElementById('handlingText').innerHTML = window[setLanguage()]["hometext6"];
-    }*/
+    // External link to the NABO publications
+    document.getElementById("publication8504").href = window[setLanguage()]["nabo8504"];
+    document.getElementById("publication8509").href = window[setLanguage()]["nabo8509"];
+    document.getElementById("pubtext8504").innerHTML = window[setLanguage()]["pubtext8504"]; 
+    document.getElementById("pubtext8509").innerHTML   = window[setLanguage()]["pubtext8509"]; 
 
     //Set the info icon to "none" in the barchart area
     document.getElementById("municipalityDetails").style.display = "none"; 
@@ -138,7 +138,7 @@ function getScale() {
 // ***********************
 // Get the secure value
 // Read the secure parameter from the url.
-// If the parameter lindasServer=http then read the data file and not the online sparql access 
+// If the parameter lindasServer=no then read the data file and not the online sparql access 
 // ***********************
 function getLindasServer() {
   var key = 'lindasServer';
@@ -169,44 +169,167 @@ function getParameter(key) {
 function dropdown_landuse(landuse_data) {
 
     var selectElement = document.getElementById('landuseID');
+    var counter = 0;
 
-    // the frist entry of the list is fix
+    // **********************************
+    // The order of the dropdown is fix
+    // **********************************
+    // The frist entry of the list is fix
+    // **********************************
     var option = document.createElement('option');
     option.text = window[setLanguage()]["chooseLanduse"];
     option.value = "";
-    selectElement.options[0] = option;
+    selectElement.options[counter] = option;
+  
+    // **********************************
+    // Crop values
+    // **********************************    
+    var landuseGroup = buildLanduseGroup(window[setLanguage()]["chooseCrop"]);
+    console.log("landuseGroup: ", landuseGroup.length);
+    for(var y=0;y<landuseGroup.length;y++){
+        var option = document.createElement('option'); 
+        console.log("landuseGroup2: ", landuseGroup[y]);
+        option.text = landuseGroup[y];
+        option.value = landuseGroup[y];
+        counter = counter+1;
+        selectElement.options[counter] = option;
+        // Delete the grouped element in the array. 
+        // If there is an element left at the end of grouping, 
+        // then show this element at the end of the dropdown list
+        for(var r=0;r<landuse_data.length;r++){
+          if(landuse_data[r].key==landuseGroup[y]){
+            console.log("zähler", r);
+            landuse_data.splice(r,1);            
+          }
+        }
+    }
 
-    // all grassland
+    // **********************************
+    // All grassland
+    // **********************************
     var option = document.createElement('option');
     option.text = window[setLanguage()]["chooseGrassland"];
     option.value = window[setLanguage()]["chooseGrassland"];
-    option.values = ["gras1","gras2"];
-    selectElement.options[1] = option;
+    counter = counter+1;
+    selectElement.options[counter] = option;
 
-    // all forest
+    // Grassland values
+    var landuseGroup = buildLanduseGroup(window[setLanguage()]["chooseGrassland"]);
+    console.log("landuseGroup: ", landuseGroup.length);
+    for(var y=0;y<landuseGroup.length;y++){
+        var option = document.createElement('option'); 
+        console.log("landuseGroup2: ", landuseGroup[y]);
+        option.text = landuseGroup[y];
+        option.value = landuseGroup[y];
+        counter = counter+1;
+        selectElement.options[counter] = option;
+        // Delete the grouped element in the array. 
+        // If there is an element left at the end of grouping, 
+        // then show this element at the end of the dropdown list
+        for(var r=0;r<landuse_data.length;r++){
+          if(landuse_data[r].key==landuseGroup[y]){
+            console.log("zähler", r);
+            landuse_data.splice(r,1);            
+          }
+        }
+    }
+    // **********************************
+    // All forest
+    // **********************************
     var option = document.createElement('option');
     option.text = window[setLanguage()]["chooseForest"];
     option.value = window[setLanguage()]["chooseForest"];
-    selectElement.options[2] = option;
+    counter = counter+1;
+    selectElement.options[counter] = option;
 
-    // all special growing
+    // Forest values
+    var landuseGroup = buildLanduseGroup(window[setLanguage()]["chooseForest"]);
+    console.log("landuseGroup: ", landuseGroup.length);
+    for(var y=0;y<landuseGroup.length;y++){
+        var option = document.createElement('option'); 
+        console.log("landuseGroup2: ", landuseGroup[y]);
+        option.text = landuseGroup[y];
+        option.value = landuseGroup[y];
+        counter = counter+1;
+        selectElement.options[counter] = option;
+        // Delete the grouped element in the array. 
+        // If there is an element left at the end of grouping, 
+        // then show this element at the end of the dropdown list
+        for(var r=0;r<landuse_data.length;r++){
+          if(landuse_data[r].key==landuseGroup[y]){
+            console.log("zähler", r);
+            landuse_data.splice(r,1);            
+          }
+        }
+    }
+    // **********************************
+    // All special growing
+    // **********************************
     var option = document.createElement('option');
     option.text = window[setLanguage()]["chooseSpecialGrowing"];
     option.value = window[setLanguage()]["chooseSpecialGrowing"];
-    selectElement.options[3] = option;
+    counter = counter+1;
+    selectElement.options[counter] = option;
 
-    // all othter
+    // special growing values
+    var landuseGroup = buildLanduseGroup(window[setLanguage()]["chooseSpecialGrowing"]);
+    console.log("landuseGroup: ", landuseGroup.length);
+    for(var y=0;y<landuseGroup.length;y++){
+        var option = document.createElement('option'); 
+        console.log("landuseGroup2: ", landuseGroup[y]);
+        option.text = landuseGroup[y];
+        option.value = landuseGroup[y];
+        counter = counter+1;
+        selectElement.options[counter] = option;
+        // Delete the grouped element in the array. 
+        // If there is an element left at the end of grouping, 
+        // then show this element at the end of the dropdown list
+        for(var r=0;r<landuse_data.length;r++){
+          if(landuse_data[r].key==landuseGroup[y]){
+            console.log("zähler", r);
+            landuse_data.splice(r,1);            
+          }
+        }
+    }
+
+    // **********************************
+    // All othter
+    // **********************************
     var option = document.createElement('option');
     option.text = window[setLanguage()]["chooseOther"];
     option.value = window[setLanguage()]["chooseOther"];
-    selectElement.options[4] = option;
+    counter = counter+1;
+    selectElement.options[counter] = option;
 
+    // Othter values
+    var landuseGroup = buildLanduseGroup(window[setLanguage()]["chooseOther"]);
+    console.log("landuseGroup: ", landuseGroup.length);
+    for(var y=0;y<landuseGroup.length;y++){
+        var option = document.createElement('option'); 
+        console.log("landuseGroup2: ", landuseGroup[y]);
+        option.text = landuseGroup[y];
+        option.value = landuseGroup[y];
+        counter = counter+1;
+        selectElement.options[counter] = option;
+        // Delete the grouped element in the array. 
+        // If there is an element left at the end of grouping, 
+        // then show this element at the end of the dropdown list
+        for(var r=0;r<landuse_data.length;r++){
+          if(landuse_data[r].key==landuseGroup[y]){
+            console.log("zähler", r);
+            landuse_data.splice(r,1);            
+          }
+        }
+    }
+
+    // If there is an element left at the end of grouping, 
+    // then show this element at the end of the dropdown list
     for(var i=0;i<landuse_data.length;i++){
+      counter = counter+1;
       var option = document.createElement('option');	
       option.text = landuse_data[i].key;
       option.value = landuse_data[i].key;
-      selectElement.options[i+5] = option;
-      console.log("landuse dropdown: ", selectElement.options);
+      selectElement.options[counter] = option;
  	}
 }
 function landuseValues(json_data) {
@@ -218,6 +341,8 @@ function landuseValues(json_data) {
     .key(function(d) { return d.landuse.value;})
     .rollup(function(d) { return d.length;})
     .entries(bindings);
+
+  console.log("landuse data: ", landuse_data);    
 
   //Sort the landuse value 
   //By default, the sort() method sorts the values as strings in alphabetical and ascending order.
@@ -286,11 +411,6 @@ function surveyValues(json_data) {
 
   var head = json_data.head.vars;
   var bindings = json_data.results.bindings;		
-
-  /*var survey_data = d3.nest()
-    .key(function(d) { return d.survey.value;})
-    .rollup(function(d) { return d.length;})
-    .entries(bindings);*/
 
   var survey_years = d3.nest()
     .key(function(d) { return d.survey.value;})
@@ -369,6 +489,11 @@ function mobileCheck() {
     } else {
       return false;
     }
+}
+
+function openpub8504() {
+
+
 }
 
  

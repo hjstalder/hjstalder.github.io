@@ -77,6 +77,16 @@ var paramMapping = {
 	mercure: "Hg",
 	nickel: "Ni",
 	plomb: "Pb",
-	zinc: "Zn",
+	zinc: "Zn"
+
+}
+
+var publicationUrl = {
+	//German
+	nabo8509de: "http://www.bafu.admin.ch/publikationen/publikation/01809/index.html?lang=de",
+	nabo8504de: "http://www.bafu.admin.ch/publikationen/publikation/01767/index.html?lang=de",
+	//French
+	nabo8509fr: "http://www.bafu.admin.ch/publikationen/publikation/01809/index.html?lang=fr", 
+	nabo8504fr: "http://www.bafu.admin.ch/publikationen/publikation/01767/index.html?lang=fr"
 
 }

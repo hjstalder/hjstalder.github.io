@@ -8,6 +8,7 @@ var legendSpacing = 6;
 var selectedParam = "";
 var height = legendRectSize + legendSpacing;
 var maxValue = d3.max(dataMeasurement, function(d) { return d.value; }); 
+console.log("Max Value: ", maxValue);
 
 //If a parameter is selected, show the legend and the highest and the guidance Level
 if(d3.select("#subID").property("value") != null && d3.select("#subID").property("value") != ""){ 
@@ -60,18 +61,25 @@ if(d3.select("#subID").property("value") != null && d3.select("#subID").property
     .attr('transform', function(d, i) {
       var horz = 320;
       console.log("radius max: ", radius(maxValue));
-      var vert = i * radius(maxValue) + 425; 
+      var vert = i * radius(maxValue) + 415; 
       return 'translate(' + horz + ',' + vert + ')';
     })
 
-  var circleold = 0;
+  // circle for the max value is not yet rendered if circleMax=0
+  var circleMax = 0;
+  // text for the max value is not yet written if textMax=0
+  var textMax = 0;
 
   glevel.append('circle')
     .attr("cx", 20)
-    .attr("cy", function(d, i) {
-      var cyValue = i * circleold;
-      circleold = radius(d) + 3;
-      return cyValue;
+    .attr("cy", function(d) {
+      console.log("circleold: ", circleMax);
+      if(circleMax==0) {
+        circleMax = 1;
+        return 10;
+      } else { 
+        return 25;
+      }
     })
     .attr("r", function(d) {
       //Calls the radius scale function
@@ -83,8 +91,49 @@ if(d3.select("#subID").property("value") != null && d3.select("#subID").property
   glevel.append('text')
     .data(dataGlevel)
     .attr('x', 47)
-    .attr('y', function(d,i) { return radius(maxValue) *i +5}) 
+    .attr('y', function(d) {
+      console.log("circleold: ", textMax);
+      if(textMax==0) {
+        textMax = 1;
+        return 13;
+      } else { 
+        return 28;
+      }
+    })
     .attr("text-anchor", "start")
     .text(function(d, i) { return d; });
+
+
+  // Text for no measurement
+  var cross = [window[setLanguage()]["noMeasurement"]];  
+  console.log("Cross text: 0");
+
+  var xdataPoint = svg.selectAll('.xdataPoint')
+    .data(cross)
+    .enter()
+    .append('g')
+    .attr('class', 'xdataPoint')
+    .attr('transform', function(d, i) {
+      var horz = 320;
+      console.log("radius max: ", radius(maxValue));
+      var vert = i * radius(maxValue) + 415; 
+      return 'translate(' + horz + ',' + vert + ')';
+      })    
+
+  xdataPoint.append('text')
+    .attr('x', 15)
+    .attr('y',70)
+    .text(function(d) {
+      console.log("Cross text: ", d);
+      return "X";
+    });
+
+  xdataPoint.append('text')
+    .attr('x', 47)
+    .attr('y',70)
+    .text(function(d) {
+      console.log("Cross text: ", d);
+      return d;
+    });
   }
 }

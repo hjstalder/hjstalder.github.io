@@ -54,7 +54,7 @@ d3.select("#landuseID").on("change", function() {
 
 //This loads the swiss-cantons.geo.json for the map,
 //the sparql query and the endpoint for the sparql request
-//queue make sure to wait for all the files before calling the callback
+//queue make sure to wait for all the files before calling the callback 
 queue()
 //When the input range changes update the circle 
   .defer(d3.json, "map/swiss-cantons.geo.json")
@@ -71,6 +71,7 @@ function updateData(json_data) {
   d3.selectAll('#chart').html("");
   d3.selectAll('.glevel').remove();
   d3.selectAll('.legend').remove();
+  d3.selectAll('.visualcross').remove();
   //Set the info icon to "none" in the barchart area
   document.getElementById("municipalityDetails").style.display = "none";
 
@@ -79,6 +80,7 @@ function updateData(json_data) {
   var measurement = null;
   var places = null;
   var dataMeasurement = [];
+  var landuseGroup = [];
 
   console.log("UBD66-Bindings: ", bindings);
 
@@ -119,8 +121,6 @@ function updateData(json_data) {
         landuse: d.landuse.value,
         lon: CHtoWGSlng((+d.lv03_y_min.value + +d.lv03_y_max.value)/2, (+d.lv03_x_min.value + +d.lv03_x_max.value)/2),
         lat: CHtoWGSlat((+d.lv03_y_min.value + +d.lv03_y_max.value)/2, (+d.lv03_x_min.value + +d.lv03_x_max.value)/2),
-        //lon: CHtoWGSlng(+d.lv03_y_min.value, +d.lv03_x_min.value),
-        //lat: CHtoWGSlat(+d.lv03_y_min.value, +d.lv03_x_min.value),
         value: measurement,   
         municipality: d.municipality.value,
         substance: d.parameter.value,
@@ -132,27 +132,31 @@ function updateData(json_data) {
         });
       }
     } else { 
-      if (d.survey.value==surveyValue 
-        && d.parameter.value==d3.select("#subID").property("value") 
-        && d.landuse.value==d3.select("#landuseID").property("value")) {
-        data.push({
-        altitude: +d.altitude.value,
-        date: formatYearMonthDay(new Date(d.date.value)),
-        landuse: d.landuse.value,
-        lon: CHtoWGSlng((+d.lv03_y_min.value + +d.lv03_y_max.value)/2, (+d.lv03_x_min.value + +d.lv03_x_max.value)/2),
-        lat: CHtoWGSlat((+d.lv03_y_min.value + +d.lv03_y_max.value)/2, (+d.lv03_x_min.value + +d.lv03_x_max.value)/2),
-        //lon: CHtoWGSlng(+d.lv03_y_min.value, +d.lv03_x_min.value),
-        //lat: CHtoWGSlat(+d.lv03_y_min.value, +d.lv03_x_min.value),
-        value: measurement,   
-        municipality: d.municipality.value,
-        substance: d.parameter.value,
-        plot: +d.plot.value,
-        year: formatYear(new Date(d.date.value)),
-        site: +d.site.value,
-        survey: +d.survey.value,
-        unit: d.unit.value
-        });
-      }
+      //  If a group of landuse is selected (e.g. grassland all)
+      //  build an array with all landuse values for this group
+      landuseGroup = buildLanduseGroup(d3.select("#landuseID").property("value"));
+      for (i = 0; i < landuseGroup.length; i++) {
+       if (d.survey.value==surveyValue 
+          && d.parameter.value==d3.select("#subID").property("value") 
+          //&& d.landuse.value==d3.select("#landuseID").property("value")) {
+          && d.landuse.value==landuseGroup[i]) {
+          data.push({
+          altitude: +d.altitude.value,
+          date: formatYearMonthDay(new Date(d.date.value)),
+          landuse: d.landuse.value,
+          lon: CHtoWGSlng((+d.lv03_y_min.value + +d.lv03_y_max.value)/2, (+d.lv03_x_min.value + +d.lv03_x_max.value)/2),
+          lat: CHtoWGSlat((+d.lv03_y_min.value + +d.lv03_y_max.value)/2, (+d.lv03_x_min.value + +d.lv03_x_max.value)/2),
+          value: measurement,   
+          municipality: d.municipality.value,
+          substance: d.parameter.value,
+          plot: +d.plot.value,
+          year: formatYear(new Date(d.date.value)),
+          site: +d.site.value,
+          survey: +d.survey.value,
+          unit: d.unit.value
+          });
+        } //if
+      } //for 
     }
   });
   //Sort the data by value (measurement)
@@ -191,9 +195,6 @@ function ready(error, json, sparqlinput, endpoint) {
     //Call the sparql query
     d3sparql.query(json, endpoint, sparql, readyall);
   }
-
-  //Call the sparql query
-  //d3sparql.query(json, endpoint, sparql, readyall);
 }
 
 //Build and draw the map
@@ -273,36 +274,17 @@ function helpers(dataMeasurement) {
   render();
 }
 
+function setForm(d) {
+  console.log("setForm: ", radius(d.value));
+  return 'circle';
+}
+
 //Render the circles and the tooltips
 function render() {
   console.log("render", data);
 
-  //render all the circles
-  //svg.selectAll('circle') 
-  svg.selectAll('.visual')
-    .data(data)
-    .enter()
-    .append('circle')
-    .attr('class', 'visual')
-    .attr('cx', function(d) {
-      var proj = projection([d.lon, d.lat]);
-      return proj[0];
-    })
-    .attr('cy', function(d) {
-      var proj = projection([d.lon, d.lat]);
-      return proj[1];
-    })
-    .attr('r', function(d) {
-      //calls the radius scale function
-      return radius(d.value);
-    })
-    .style('fill', function(d) {
-      return circlecolor(d.landuse);
-    })  
-    .style('stroke','white') //white
-    .on('mouseover', selectCircle)
-    .on('mouseout', deselectCircle)
-    .on('click', showMunicipalityDetail)
+  //render all the circles and 'x'
+  setDataPoints();
 
   //Render the tooltips
   //an enter update exit cyle is used here, this is because tooltip need to 

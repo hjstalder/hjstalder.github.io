@@ -12,6 +12,8 @@
   <script src="javascript/circlecolor.js" type="text/javascript"></script> 
   <script src="javascript/modal.js" type="text/javascript"></script>
   <script src="javascript/start.js" type="text/javascript"></script>
+  <script src="javascript/datapoints.js" type="text/javascript"></script>
+  <script src="javascript/landuse.js" type="text/javascript"></script>
   <script src="javascript/d3.slider.js" type="text/javascript"></script> 
   <script src="javascript/d3.tip.js" type="text/javascript"></script>   
   <script src="javascript/sparql.js" type="text/javascript"></script>
@@ -38,20 +40,23 @@
         <div>
           <a href="#close" title="Close" class="close">X</a>
           <h3 id="handlingTitle"></h3>
-          <h4 class="list" id="handlingText"></h4>
+          <h4 id="handlingText"></h4>
+          <h3 id="explanationTitle"></h3>
+          <h4 id="explanationText"></h4>
         </div>
       </div> <!-- div openModal -->
       <br>
-      <h3 id="titel"></h3>
-      <h4 id="text1"></h4>
       <h3 id="text2"></h3>
       <h4 class="link" id="text3"></h4>
         <a href="#" id="vis_page" class="tooltipinfo" onclick="opentabVis(event, 'vis')">
           <img src="img/Bild8.png">
           <span id="tooltiptext_vis" class="tooltiptext"></span>
         </a>
-      <h4 class="link" id="text4"></h4>
-      <h4 id="text7"></h4>
+      <h4 class="link" id="text4"></h4>       
+      <h3 id="text0"></h3>
+      <h4 id="text1"></h4>
+        <a href="" id="publication8504" target="_blank"><img id="pubimg" src="img/external.png"><span id="pubtext8504" class="pubtext"></span></a><br>
+        <a href="" id="publication8509" target="_blank"><img id="pubimg" src="img/external.png"><span id="pubtext8509" class="pubtext"></span></a>
       <h4 id="error" class="error"></h4>
     </div> <!-- div home -->
     <div id="vis" class="tabcontent">
@@ -63,6 +68,9 @@
         <div>
           <a href="#close" title="Close" class="close">X</a>
           <h3 id="handlingTitleVis"></h3>
+          <h4 id="handlingTextVis"></h4>
+          <h3 id="explanationTitleVis"></h3>
+          <h4 id="explanationTextVis"></h4>          
           <h4 class="list" id="handlingTextVis"></h4>
         </div>
       </div> <!-- div openModal -->      
@@ -95,10 +103,11 @@
       </form>
       <script src="javascript/sketch.js" type="text/javascript"></script>
       <div id="municipalityDetails">
-        <a class="tooltipinfo" id="modal_municipality" href="#openModal" onclick="modalbox_municipality(selectedMunicipality)">
+        <!-- if there are detail information about municipality this code block can be used -->
+        <!--<a class="tooltipinfo" id="modal_municipality" href="#openModal" onclick="modalbox_municipality(selectedMunicipality)">
           <img src="img/info.png">
           <span id="tooltiptext_place" class="tooltiptext"></span>
-        </a>
+        </a>-->
       </div> <!-- div municipalityDetails -->
       <div id="barchart">
         <div id="detail">
