@@ -16,6 +16,7 @@ function modalbox_landuse () {
 	console.log("modalbox1: ", document.getElementById('modaltitel'));
 	document.getElementById('modaltitel').innerHTML = window[setLanguage()]["landusetext0"];
 	document.getElementById('modaltext').innerHTML = window[setLanguage()]["landusetext1"];
+	document.getElementById('loreipsum').innerHTML = "";
 }
 
 function modalbox_municipality (selectedMunicipality) {
