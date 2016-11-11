@@ -251,6 +251,18 @@ th, td {
     margin-left: 28px;
     margin-right: 20px;
 }
+
+#publication8504:link, #publication8504:visited, #publication8504:active {
+    text-decoration: underline;
+    color: black;
+
+}
+
+#publication8509:link, #publication8509:visited, #publication8509:active {
+    text-decoration: underline;
+    color: black;
+
+}
 /* ******************************** */
 /* Style the tabs and list elements */
 /* ******************************** */
@@ -571,4 +583,8 @@ rect {
 .xdataPoint {
     font-size: 12px;
     font-family: Frutiger Neue;    
+}
+
+.colorful {
+    background-color: yellow;
 }
