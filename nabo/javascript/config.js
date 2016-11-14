@@ -1,10 +1,6 @@
-var survey = {
-	survey0: "1985-89",
-	survey1: "1990-94",
-	survey2: "1995-99",
-	survey3: "2000-04",
-	survey4: "2005-09"
-}
+//  ***********************
+//  Configuration values
+//  ***********************
 var color = {
 	crop: "#CCA286",						/* "Ackerbau allgemein" */
 	cropCultivation: "#CCA286",				/* "Ackerbau" */
@@ -81,12 +77,14 @@ var paramMapping = {
 
 }
 
-var publicationUrl = {
+/*var publicationUrl = {
+
 	//German
 	nabo8509de: "http://www.bafu.admin.ch/publikationen/publikation/01809/index.html?lang=de",
-	nabo8504de: "http://www.bafu.admin.ch/publikationen/publikation/01767/index.html?lang=de",
+	nabo8504de: "http://www.bafu.admin.ch/publikationen/publikation/01767/index.html?lang=de"
+
 	//French
 	nabo8509fr: "http://www.bafu.admin.ch/publikationen/publikation/01809/index.html?lang=fr", 
 	nabo8504fr: "http://www.bafu.admin.ch/publikationen/publikation/01767/index.html?lang=fr"
 
-}
+}*/

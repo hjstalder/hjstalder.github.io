@@ -1,11 +1,14 @@
 // ***********************
-// SPARQL access 
+// SPARQL data access 
 // ***********************
 var d3sparql = {
   version: "sparql.js version 2016-06-12",
-  debug: false  // set to true for showing debug information
+  debug: false  // Set to true for showing debug information
 }
 
+// ***********************
+// XMLHTTPRequest to retrieve the data from the endpoint https://lindas-data.ch/sparql
+// ***********************
 d3sparql.query = function(json, endpoint, sparql, callback) {
   var url = endpoint + "?query=" + encodeURIComponent(sparql);
   if (sparql.debug) { console.log(endpoint); }
@@ -15,16 +18,20 @@ d3sparql.query = function(json, endpoint, sparql, callback) {
   d3.xhr(url, mime, function(error, request) {
     
     if(error) {
-      //If it's an error, write the error to the console
+      // ***********************
+      // If there is an error, write the error message to the console
+      // ***********************
       console.log('error', error);
-      //Read the data from the saved file
+      // ***********************
+      // Read the data from the saved file
+      // ***********************
       d3sparql.readfile(json, callback);
     } else { 
       var json_data = request.responseText;
       object = JSON.parse(json_data);
-      console.log("object: ", object.results.bindings.length);
-      console.log("data sparql2: ", object);
-      //If the json file is empty, read the data from the saved file
+      // ***********************
+      // If the json file is empty, read the data from the saved file
+      // ***********************
       if(object.results.bindings.length == 0 ) {
           d3sparql.readfile(json, callback);
       } else {
@@ -33,11 +40,14 @@ d3sparql.query = function(json, endpoint, sparql, callback) {
     }
   });
 }
-
-//Read the data from the saved file and write a message
+// ***********************
+// Read the data from the saved file and write a message
+// ***********************
 d3sparql.readfile = function(json, callback) {
       document.getElementById('error').innerHTML = window[setLanguage()]["errortext"];
-      //Read the data from the saved file with the current language
+      // ***********************
+      // Read the data from the saved file with the current language
+      // ***********************
       var filename = "sparql/dataUBD66_" + setLanguage() + ".json";
       queue()
           .defer(d3.json, filename)

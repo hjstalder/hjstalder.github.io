@@ -1,16 +1,16 @@
 //  ***********************
-//  Build the details for the legend and render them
+//  Build the details for the caption and render them
 //  ***********************
-function showLegend(dataMeasurement) { 
+function showCaption(dataMeasurement) { 
 
-var legendRectSize = 12;
-var legendSpacing = 6;
+var captionRectSize = 12;
+var captionSpacing = 6;
 var selectedParam = "";
-var height = legendRectSize + legendSpacing;
+var height = captionRectSize + captionSpacing;
 var maxValue = d3.max(dataMeasurement, function(d) { return d.value; }); 
 console.log("Max Value: ", maxValue);
 
-//If a parameter is selected, show the legend and the highest and the guidance Level
+//If a parameter is selected, show the caption and the highest and the guidance Level
 if(d3.select("#subID").property("value") != null && d3.select("#subID").property("value") != ""){ 
   //Mapping of parameter name (e.g. Cadmium) to the code (e.g. Cd)
   selectedParam = paramMapping[d3.select("#subID").property("value")];
@@ -23,38 +23,38 @@ if(d3.select("#subID").property("value") != null && d3.select("#subID").property
           window[setLanguage()]["other"]])
     .range([color.crop, color.grassland, color.forest, color.specialGrowing, color.other]);
 
-  var legend = svg.selectAll(".legend")
+  var caption = svg.selectAll(".caption")
     .data(colors.domain())
     .enter()
     .append('g')
-    .attr('class', 'legend')
+    .attr('class', 'caption')
     .attr('transform', function(d, i) {
       var horz = -15;
       var vert = i * height + 400;
       return 'translate(' + horz + ',' + vert + ')';
     }); 
 
-  legend.append('circle')
+  caption.append('circle')
     .attr("cx", 5)
     .attr("cy", 5)
     .attr("r", 5) 
     .style('fill', colors);
 
-  legend.append('text')
-    .attr('x', legendRectSize + legendSpacing)
-    .attr('y', legendRectSize - legendSpacing + 4)
+  caption.append('text')
+    .attr('x', captionRectSize + captionSpacing)
+    .attr('y', captionRectSize - captionSpacing + 4)
     .text(function(d) { return d; });
 
   //Show the highest and the guidance Level
   var dataGlevel = ([window[setLanguage()]["maxValue"] + ": " + maxValue + " " + window[setLanguage()]["unitValueShort"],
                     window[setLanguage()]["guidanceLevel"] + ": " + guidanceLevel[selectedParam] + " " + window[setLanguage()]["unitValueShort"]]);
 
-  var legendCircle = d3.scale.ordinal()
+  var captionCircle = d3.scale.ordinal()
     .domain([maxValue, guidanceLevel[selectedParam]])
     .range([color.maxValue, color.guidanceLevel]);
 
   var glevel = svg.selectAll('.glevel')
-    .data(legendCircle.domain())
+    .data(captionCircle.domain())
     .enter()
     .append('g')
     .attr('class', 'glevel')
@@ -86,7 +86,7 @@ if(d3.select("#subID").property("value") != null && d3.select("#subID").property
       console.log("radius wert: ", radius(d));
       return radius(d);}) 
     .style("stroke", "none")
-    .style("fill", legendCircle);
+    .style("fill", captionCircle);
 
   glevel.append('text')
     .data(dataGlevel)

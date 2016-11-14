@@ -11,7 +11,6 @@ var de = {
 	hometext5 : "Handhabung Visualisierung",
 	hometext6 : "<ol><li>Wechseln Sie zum Register Visualisierung.</li><li>Wählen Sie ein Schwermetall aus.</li><li>Mit dem Schieberegler können Sie einen Beprobungszeitraum bestim- men (Vorgabe: 2005-09).</li><li>Die Auswahl der Landnutzung ist optional.</li><li>Details zum Standort werden im Tooltip zu jedem Datenpunkt ange- zeigt.</li><li>Mittels Mausklick auf einen Datenpunkt werden weitere Details zum Standort und zur zeitlichen Entwicklung dargestellt.</ol>",
 	hometext6mobile : "<ol><li>Wechseln Sie zum Register Visualisierung.</li><li>Wählen Sie ein Schwermetall aus.</li><li>Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</li><li>Die Auswahl der Landnutzung ist optional.</li><li>Details zum Standort werden im Tooltip zu jedem Datenpunkt angezeigt.</li><li>Mittels einem Fingertipp auf den Link «Zeitliche Entwicklung» im Tooltip werden weitere Details zum Standort und zur zeitlichen Entwicklung angezeigt.</ol>",
-	/*hometext6mobile : "1. Wechseln Sie zum Register Visualisierung.</br>2. Wählen Sie ein Schwermetall aus. </br>3. Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</br>4. Die Auswahl der Landnutzung ist optional.</br>5. Details zum Standort werden im Tooltip zu jedem Datenpunkt angzeigt.</br>6. Mittels einem Fingertipp auf den Link «Zeitliche Entwicklung» im Tooltip werden weitere Details zum Standort und zur zeitlichen Entwicklung angezeigt.",*/
 	hometext7 : "Erklärungen zur Visualisierung",
 	hometext8 : "Falls ein Standort für einen Zeitpunkt beprobt wurde, für das ent- sprechende Schwermetall jedoch kein Messresultat verfügbar ist, wird dies folgendermassen dargestellt: <ol><li>In der Visualisierung mit einem «X».</li><li>In den Details zur zeitlichen Entwicklung wird für ein beprobtes Schwermetall im Balkendiagramm das Jahr angezeigt, aber kein blauer Balken dargestellt.",
 	errortext : "</br>Die Daten konnten nicht online gelesen werden. Es werden Erhebungsdaten vom Juli 2016 verwendet.",
@@ -72,7 +71,6 @@ var de = {
 	pubtext8504: "Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2004",
 	pubtext8509: "Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2009",
 	noMeasurement: "Beprobt, kein Messresultat"
-
 };
 
 var fr = {
@@ -88,7 +86,6 @@ var fr = {
 	hometext5 : "De-Handhabung Visualisierung",
 	hometext6 : "<ol><li>De-Wechseln Sie zum Register Visualisierung.</li><li>Wählen Sie ein Schwermetall aus.</li><li>Mit dem Schieberegler können Sie einen Beprobungszeitraum bestim- men (Vorgabe: 2005-09).</li><li>Die Auswahl der Landnutzung ist optional.</li><li>Details zum Standort werden im Tooltip zu jedem Datenpunkt ange- zeigt.</li><li>Mittels Mausklick auf einen Datenpunkt werden weitere Details zum Standort und zur zeitlichen Entwicklung dargestellt.</ol>",
 	hometext6mobile : "<ol><li>De-Wechseln Sie zum Register Visualisierung.</li><li>Wählen Sie ein Schwermetall aus.</li><li>Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</li><li>Die Auswahl der Landnutzung ist optional.</li><li>Details zum Standort werden im Tooltip zu jedem Datenpunkt angezeigt.</li><li>Mittels einem Fingertipp auf den Link «Zeitliche Entwicklung» im Tooltip werden weitere Details zum Standort und zur zeitlichen Entwicklung angezeigt.</ol>",
-	/*hometext6mobile : "1. Wechseln Sie zum Register Visualisierung.</br>2. Wählen Sie ein Schwermetall aus. </br>3. Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</br>4. Die Auswahl der Landnutzung ist optional.</br>5. Details zum Standort werden im Tooltip zu jedem Datenpunkt angzeigt.</br>6. Mittels einem Fingertipp auf den Link «Zeitliche Entwicklung» im Tooltip werden weitere Details zum Standort und zur zeitlichen Entwicklung angezeigt.",*/
 	hometext7 : "De-Erklärungen zur Visualisierung",
 	hometext8 : "De-Falls ein Standort für einen Zeitpunkt beprobt wurde, für das ent- sprechende Schwermetall jedoch kein Messresultat verfügbar ist, wird dies folgendermassen dargestellt: <ol><li>In der Visualisierung mit einem «X».</li><li>In den Details zur zeitlichen Entwicklung wird für ein beprobtes Schwermetall im Balkendiagramm das Jahr angezeigt, aber kein blauer Balken dargestellt.",
 	errortext : "</br>De-Die Daten konnten nicht online gelesen werden. Es werden Erhebungsdaten vom Juli 2016 verwendet.",
@@ -164,7 +161,6 @@ var it = {
 	hometext5 : "De-Handhabung Visualisierung",
 	hometext6 : "<ol><li>De-Wechseln Sie zum Register Visualisierung.</li><li>Wählen Sie ein Schwermetall aus.</li><li>Mit dem Schieberegler können Sie einen Beprobungszeitraum bestim- men (Vorgabe: 2005-09).</li><li>Die Auswahl der Landnutzung ist optional.</li><li>Details zum Standort werden im Tooltip zu jedem Datenpunkt ange- zeigt.</li><li>Mittels Mausklick auf einen Datenpunkt werden weitere Details zum Standort und zur zeitlichen Entwicklung dargestellt.</ol>",
 	hometext6mobile : "<ol><li>De-Wechseln Sie zum Register Visualisierung.</li><li>Wählen Sie ein Schwermetall aus.</li><li>Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</li><li>Die Auswahl der Landnutzung ist optional.</li><li>Details zum Standort werden im Tooltip zu jedem Datenpunkt angezeigt.</li><li>Mittels einem Fingertipp auf den Link «Zeitliche Entwicklung» im Tooltip werden weitere Details zum Standort und zur zeitlichen Entwicklung angezeigt.</ol>",
-	/*hometext6mobile : "1. Wechseln Sie zum Register Visualisierung.</br>2. Wählen Sie ein Schwermetall aus. </br>3. Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</br>4. Die Auswahl der Landnutzung ist optional.</br>5. Details zum Standort werden im Tooltip zu jedem Datenpunkt angzeigt.</br>6. Mittels einem Fingertipp auf den Link «Zeitliche Entwicklung» im Tooltip werden weitere Details zum Standort und zur zeitlichen Entwicklung angezeigt.",*/
 	hometext7 : "De-Erklärungen zur Visualisierung",
 	hometext8 : "De-Falls ein Standort für einen Zeitpunkt beprobt wurde, für das ent- sprechende Schwermetall jedoch kein Messresultat verfügbar ist, wird dies folgendermassen dargestellt: <ol><li>In der Visualisierung mit einem «X».</li><li>In den Details zur zeitlichen Entwicklung wird für ein beprobtes Schwermetall im Balkendiagramm das Jahr angezeigt, aber kein blauer Balken dargestellt.",
 	errortext : "</br>De-Die Daten konnten nicht online gelesen werden. Es werden Erhebungsdaten vom Juli 2016 verwendet.",
@@ -240,7 +236,6 @@ var en = {
 	hometext5 : "De-Handhabung Visualisierung",
 	hometext6 : "<ol><li>De-Wechseln Sie zum Register Visualisierung.</li><li>Wählen Sie ein Schwermetall aus.</li><li>Mit dem Schieberegler können Sie einen Beprobungszeitraum bestim- men (Vorgabe: 2005-09).</li><li>Die Auswahl der Landnutzung ist optional.</li><li>Details zum Standort werden im Tooltip zu jedem Datenpunkt ange- zeigt.</li><li>Mittels Mausklick auf einen Datenpunkt werden weitere Details zum Standort und zur zeitlichen Entwicklung dargestellt.</ol>",
 	hometext6mobile : "<ol><li>De-Wechseln Sie zum Register Visualisierung.</li><li>Wählen Sie ein Schwermetall aus.</li><li>Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</li><li>Die Auswahl der Landnutzung ist optional.</li><li>Details zum Standort werden im Tooltip zu jedem Datenpunkt angezeigt.</li><li>Mittels einem Fingertipp auf den Link «Zeitliche Entwicklung» im Tooltip werden weitere Details zum Standort und zur zeitlichen Entwicklung angezeigt.</ol>",
-	/*hometext6mobile : "1. Wechseln Sie zum Register Visualisierung.</br>2. Wählen Sie ein Schwermetall aus. </br>3. Mit dem Schieberegler können Sie einen Beprobungszeitraum bestimmen (Vorgabe: 2005-09).</br>4. Die Auswahl der Landnutzung ist optional.</br>5. Details zum Standort werden im Tooltip zu jedem Datenpunkt angzeigt.</br>6. Mittels einem Fingertipp auf den Link «Zeitliche Entwicklung» im Tooltip werden weitere Details zum Standort und zur zeitlichen Entwicklung angezeigt.",*/
 	hometext7 : "De-Erklärungen zur Visualisierung",
 	hometext8 : "De-Falls ein Standort für einen Zeitpunkt beprobt wurde, für das ent- sprechende Schwermetall jedoch kein Messresultat verfügbar ist, wird dies folgendermassen dargestellt: <ol><li>In der Visualisierung mit einem «X».</li><li>In den Details zur zeitlichen Entwicklung wird für ein beprobtes Schwermetall im Balkendiagramm das Jahr angezeigt, aber kein blauer Balken dargestellt.",
 	errortext : "</br>De-Die Daten konnten nicht online gelesen werden. Es werden Erhebungsdaten vom Juli 2016 verwendet.",
@@ -299,4 +294,4 @@ var en = {
 	pubtext8504: "De-Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2004",
 	pubtext8509: "De-Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2009",
 	noMeasurement: "De-Beprobt, kein Messresultat"
-}
+};

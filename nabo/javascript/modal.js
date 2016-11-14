@@ -46,7 +46,4 @@ function modalbox_handling () {
       document.getElementById('handlingTextVis').innerHTML = window[setLanguage()]["hometext6"];
     }
 
-
-
-
 }

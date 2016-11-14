@@ -70,7 +70,7 @@ function updateData(json_data) {
   d3.selectAll('#detail').html("");
   d3.selectAll('#chart').html("");
   d3.selectAll('.glevel').remove();
-  d3.selectAll('.legend').remove();
+  d3.selectAll('.caption').remove();
   d3.selectAll('.visualcross').remove();
   d3.selectAll('.xdataPoint').remove();
   //Set the info icon to "none" in the barchart area
@@ -242,7 +242,7 @@ function readyall(error, json, json_data) {
 }
 
 //Set the radius scale function
-//Build the legend and the guidance level
+//Build the caption and the guidance level
 function helpers(dataMeasurement) {
 
   //If the parameter scale=guideValue is set in the URL then show the circles radius in dependence of guide value
@@ -269,8 +269,8 @@ function helpers(dataMeasurement) {
     .range([2, 18]);
     //.range([2, 30]);
   }
-  //show the legend and the guidance level
-  showLegend(dataMeasurement);
+  //show the caption and the guidance level
+  showCaption(dataMeasurement);
   //render the circles
   render();
 }

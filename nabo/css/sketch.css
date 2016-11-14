@@ -552,9 +552,9 @@ ul.tab li a:focus, .active {background-color: #66AFE9;}
     background: #66AFE9; 
 }
 /* ************************************** */
-/* Style the visualization and the legend */
+/* Style the visualization and the caption */
 /* ************************************** */
-.legend {
+.caption {
     font-size: 12px;
     font-family: Frutiger Neue;
 }
