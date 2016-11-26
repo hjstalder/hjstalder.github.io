@@ -26,16 +26,19 @@
   <input type="hidden" id="selectedMunicipality" name="municipality" value=""/>
   <header>
   </header>
+  <!-- div for the wrapper starts -->
   <div id="wrapper">
     <ul class="tab">
       <li id="starttab"><a href="#" id="tabhome" class="tablinks" onclick="opentab(event, 'home')"></a></li>
       <li><a href="#" id="tabvis" class="tablinks" onclick="opentab(event, 'vis')"></a></li>
     </ul>
+    <!-- div home site starts -->
     <div id="home" class="tabcontent">
       <a class="tooltipinfo" id="modal_handling" href="#openModalHandling" onclick="modalbox_handling()">
         <img src="img/noun_641715.svg">
         <span id="tooltiptext_handling" class="tooltiptext"></span>
       </a>
+      <!-- div openModal for generell information about the data visualization on the home site starts -->
       <div id="openModalHandling" class="modalDialog">
         <div>
           <a href="#close" title="Close" class="close">X</a>
@@ -44,7 +47,8 @@
           <h3 id="explanationTitle"></h3>
           <h4 id="explanationText"></h4>
         </div>
-      </div> <!-- div openModal -->
+      </div>
+      <!-- div openModal for generell information about the data visualization on the home site ends -->
       <br>
       <h3 id="text2"></h3>
       <h4 class="link" id="text3"></h4>
@@ -56,14 +60,18 @@
       <h3 id="text0"></h3>
       <h4 id="text1"></h4>
         <a href="" id="publication8504" target="_blank"><img id="pubimg" src="img/external.png"><span id="pubtext8504" class="pubtext"></span></a><br>
-        <a href="" id="publication8509" target="_blank"><img id="pubimg" src="img/external.png"><span id="pubtext8509" class="pubtext"></span></a>
+        <a href="" id="publication8509" target="_blank"><img id="pubimg" src="img/external.png"><span id="pubtext8509" class="pubtext"></span></a><br>
+        <a href="" id="ubd0066" target="_blank"><img id="pubimg" src="img/external.png"><span id="textubd0066" class="pubtext"></span></a>
       <h4 id="error" class="error"></h4>
-    </div> <!-- div home -->
+    </div> 
+    <!-- div home site ends -->
+    <!-- div visualization site starts -->
     <div id="vis" class="tabcontent">
       <a class="tooltipinfo" id="modal_handling_vis" href="#openModalHandlingVis" onclick="modalbox_handling()">
         <img src="img/noun_641715.svg">
         <span id="tooltiptext_handling_vis" class="tooltiptext"></span>
       </a>
+      <!-- div openModal for generell information about the data visualization on the visualization site starts -->
       <div id="openModalHandlingVis" class="modalDialog">
         <div>
           <a href="#close" title="Close" class="close">X</a>
@@ -73,8 +81,11 @@
           <h4 id="explanationTextVis"></h4>          
           <h4 class="list" id="handlingTextVis"></h4>
         </div>
-      </div> <!-- div openModal -->      
+      </div>    
+      <!-- div openModal for generell information about the data visualization on the visualization site ends -->
+      <!-- dropdown lists and slider  -->
       <form>
+        <!-- div for the select starts -->
         <div id="select">
           <select id="subID" name="substance" size="1"></select>
           <a class="tooltipinfo" id="modal_param" href="#openModal" onclick="modalbox_parameter()">
@@ -91,6 +102,7 @@
           </div>
           <div class="text"></div>
           <div id="slider"></div>
+          <!-- div openModal for information about the heavy metal and landuse starts -->
           <div id="openModal" class="modalDialog">
             <div>
               <a href="#close" title="Close" class="close">X</a>
@@ -98,24 +110,33 @@
               <h4 id="modaltext"></h4>
               <h4 id="loreipsum"></h4>
             </div>
-          </div> <!-- div openModal -->
-        </div> <!-- div select -->
+          </div>
+          <!-- div openModal for information about the heavy metal and landuse ends -->
+        </div> 
+        <!-- div for the select ends -->
       </form>
+      <!-- the main javascript sketch.js must be defined here -->
       <script src="javascript/sketch.js" type="text/javascript"></script>
+      <!-- div for the municipalityDetails starts -->
       <div id="municipalityDetails">
         <!-- if there are detail information about municipality this code block can be used -->
         <!--<a class="tooltipinfo" id="modal_municipality" href="#openModal" onclick="modalbox_municipality(selectedMunicipality)">
           <img src="img/noun_641715.svg">
           <span id="tooltiptext_place" class="tooltiptext"></span>
         </a>-->
-      </div> <!-- div municipalityDetails -->
+      </div> 
+      <!-- div for the municipalityDetails ends -->
+      <!-- div for the barchart starts -->
       <div id="barchart">
         <div id="detail">
           <span id="content"></span>
         </div>
         <div id="chart"></div>
-      </div> <!-- div barchart -->
-    </div> <!-- div vis -->
-  </div> <!-- div wrapper -->
+      </div> 
+      <!-- div for the barchart ends-->
+    </div> 
+    <!-- div visualization site ends -->
+  </div> 
+  <!-- div for the wrapper ends-->
 </body>
 </html>

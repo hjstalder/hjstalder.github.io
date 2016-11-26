@@ -93,6 +93,10 @@ function setactive(evt, register) {
     document.getElementById("pubtext8504").innerHTML = window[setLanguage()]["pubtext8504"]; 
     document.getElementById("pubtext8509").innerHTML   = window[setLanguage()]["pubtext8509"]; 
 
+    // External link to the UBD0066 dataset
+    document.getElementById("ubd0066").href = window[setLanguage()]["ubd0066"];
+    document.getElementById("textubd0066").innerHTML = window[setLanguage()]["textubd0066"]; 
+
     //Set the info icon to "none" in the barchart area
     document.getElementById("municipalityDetails").style.display = "none"; 
 }
@@ -490,11 +494,3 @@ function mobileCheck() {
       return false;
     }
 }
-
-function openpub8504() {
-
-
-}
-
- 
-

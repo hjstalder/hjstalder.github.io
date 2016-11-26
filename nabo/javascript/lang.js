@@ -4,9 +4,9 @@ var de = {
 	tabvis : "Visualisierung",
 	tabplace : "Beobachtungsstandorte",
 	hometext0 : "Nationale Bodenbeobachtung (NABO) 1985-2009",
-	hometext1 : "Die Nationale Bodenbeobachtung (NABO) überwacht mit ihrem Messnetz aus über 100 Dauerbeobachtungsstandorten seit 1985 die Entwicklung der Schadstoffgehalte unserer Böden. Die Standorte wurden so ausgewählt, dass unterschiedliche Landnutzungstypen (Ackerbau, Grasland, Wald, Spezialkulturen und andere) vertreten sind. Der vorliegende Datensatz präsentiert die Resultate über fünf Erhebungen (1985–2009) für die Schwermetalle Cadmium, Zink, Kupfer, Quecksilber, Blei, Nickel, Chrom und Cobalt.",
+	hometext1 : "Die Nationale Bodenbeobachtung (NABO) überwacht mit ihrem Messnetz aus über 100 Dauerbeobachtungsstandorten seit 1985 die Entwicklung der Schadstoffgehalte unserer Böden. Die Standorte wurden so ausgewählt, dass unterschiedliche Landnutzungstypen (Ackerbau, Grasland, Wald, Spezialkulturen und andere) vertreten sind. Die verfügbaren Daten präsentieren die Resultate über fünf Erhebungen (1985–2009) für die Schwermetalle Cadmium, Zink, Kupfer, Quecksilber, Blei, Nickel, Chrom und Cobalt.",
 	hometext2 : "Visualisierung Schwermetallbelastung des Bodens",
-	hometext3 : "Die vorliegende Visualisierung der Schwermetallbelastung basiert auf dem aktuellen Datensatz, welcher durch das Bundesamt für Umwelt auf lindas-data.ch publiziert wird. Die Daten werden online gelesen (SPARQL) und verarbeitet.",
+	hometext3 : "Die vorliegende Visualisierung der Schwermetallbelastung basiert auf den aktuellen Daten, welche durch das Bundesamt für Umwelt auf lindas-data.ch publiziert werden. Die Daten werden online gelesen (SPARQL) und verarbeitet.",
 	hometext4 : "Bei den Messdaten handelt es sich um Erhebungsmittelwerte von Schwermetallkonzentrationen in den obersten 20 cm des Bodens von rund 100 Dauerbeobachtungsstandorten der Nationalen Bodenbeobachtung NABO.",
 	hometext5 : "Handhabung Visualisierung",
 	hometext6 : "<ol><li>Wechseln Sie zum Register Visualisierung.</li><li>Wählen Sie ein Schwermetall aus.</li><li>Mit dem Schieberegler können Sie einen Beprobungszeitraum bestim- men (Vorgabe: 2005-09).</li><li>Die Auswahl der Landnutzung ist optional.</li><li>Details zum Standort werden im Tooltip zu jedem Datenpunkt ange- zeigt.</li><li>Mittels Mausklick auf einen Datenpunkt werden weitere Details zum Standort und zur zeitlichen Entwicklung dargestellt.</ol>",
@@ -70,7 +70,9 @@ var de = {
 	nabo8509: "http://www.bafu.admin.ch/publikationen/publikation/01809/index.html?lang=de",
 	pubtext8504: "Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2004",
 	pubtext8509: "Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2009",
-	noMeasurement: "Beprobt, kein Messresultat"
+	noMeasurement: "Beprobt, kein Messresultat",
+	ubd0066: "http://www.ubst.bafu.admin.ch/opendata/UBD0066.ods",
+	textubd0066: "Spezifikation und Daten der Schwermetallbelastung des Bodens"
 };
 
 var fr = {
@@ -145,7 +147,9 @@ var fr = {
 	nabo8509: "http://www.bafu.admin.ch/publikationen/publikation/01809/index.html?lang=fr",
 	pubtext8504: "De-Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2004",
 	pubtext8509: "De-Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2009",
-	noMeasurement: "De-Beprobt, kein Messresultat"
+	noMeasurement: "De-Beprobt, kein Messresultat",
+	ubd0066: "http://www.ubst.bafu.admin.ch/opendata/UBD0066.ods",
+	textubd0066: "De-Spezifikation und Daten der Schwermetallbelastung des Bodens"
 };
 
 var it = {
@@ -220,7 +224,9 @@ var it = {
 	nabo8509: "http://www.bafu.admin.ch/publikationen/publikation/01809/index.html?lang=fr",
 	pubtext8504: "De-Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2004",
 	pubtext8509: "De-Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2009",
-	noMeasurement: "De-Beprobt, kein Messresultat"
+	noMeasurement: "De-Beprobt, kein Messresultat",
+	ubd0066: "http://www.ubst.bafu.admin.ch/opendata/UBD0066.ods",
+	textubd0066: "De-Spezifikation und Daten der Schwermetallbelastung des Bodens"
 };
 
 var en = {
@@ -293,5 +299,7 @@ var en = {
 	nabo8509: "http://www.bafu.admin.ch/publikationen/publikation/01809/index.html?lang=de",
 	pubtext8504: "De-Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2004",
 	pubtext8509: "De-Ergebnisse der Nationalen Bodenbeobachtung (NABO) 1985−2009",
-	noMeasurement: "De-Beprobt, kein Messresultat"
+	noMeasurement: "De-Beprobt, kein Messresultat",
+	ubd0066: "http://www.ubst.bafu.admin.ch/opendata/UBD0066.ods",
+	textubd0066: "De-Spezifikation und Daten der Schwermetallbelastung des Bodens"
 };

@@ -263,6 +263,11 @@ th, td {
     color: black;
 
 }
+#ubd0066:link, #ubd0066:visited, #ubd0066:active {
+    text-decoration: underline;
+    color: black;
+
+}
 /* ******************************** */
 /* Style the tabs and list elements */
 /* ******************************** */
