@@ -8,7 +8,7 @@ function modalbox_parameter () {
 	document.getElementById('modaltext').innerHTML = "<a href='" + window[setLanguage()]["glossarUrl"] + "'" + "target='_blank'>" + 
     window[setLanguage()]["glossarUrlText"] + "</a>";	
 
-    document.getElementById('loreipsum').innerHTML = window[setLanguage()]["loreipsum"];
+    document.getElementById('loreipsum').innerHTML = "";
 }
 
 function modalbox_landuse () {
