@@ -1,1 +1,1 @@
-http://lindas-data.ch/sparql
+https://lindasprd.netrics.ch/lindas/query/
