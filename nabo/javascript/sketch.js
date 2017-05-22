@@ -191,7 +191,6 @@ function ready(error, json, sparqlinput, endpoint) {
   //If there is no secure environment for lindas (https://lindas-data.ch/sparql) then read the data from the saved file
   if (getLindasServer() == "http") {
     //Read the data from the saved file
-    console.log("stardog");
     d3sparql.readfile(json, readyall);
   } else {
     //Call the sparql query
