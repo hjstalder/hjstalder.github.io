@@ -1,1 +1,1 @@
-http://lindas-data.ch/sparql
+https://lindas-data.ch/sparql
